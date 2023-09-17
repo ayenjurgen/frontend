@@ -54,3 +54,15 @@ dist-ssr
         #     </tbody> */}
         #     </table>
         # </div>
+
+        #         <>
+        # <h1>Add Product</h1>
+        # <form onSubmit={handleSubmit}>
+
+
+        # <input type="submit" />
+        # </form>
+        
+        # </>
+
+        

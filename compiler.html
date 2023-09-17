@@ -103,7 +103,38 @@
 			</div>
 		</div>
 
-		<div class="header">
+		<div class="form-group">
+			<label>Single Select</label>
+			<select
+				class="custom-select2 form-control"
+				name="state"
+				style="width: 100%; height: 38px"
+			>
+				<optgroup label="Alaskan/Hawaiian Time Zone">
+					<option value="AK">Alaska</option>
+					<option value="HI">Hawaii</option>
+				</optgroup>
+				<optgroup label="Pacific Time Zone">
+					<option value="CA">California</option>
+					<option value="NV">Nevada</option>
+					<option value="OR">Oregon</option>
+					<option value="WA">Washington</option>
+				</optgroup>
+				<optgroup label="Mountain Time Zone">
+					<option value="AZ">Arizona</option>
+					<option value="CO">Colorado</option>
+					<option value="ID">Idaho</option>
+					<option value="MT">Montana</option>
+					<option value="NE">Nebraska</option>
+					<option value="NM">New Mexico</option>
+					<option value="ND">North Dakota</option>
+					<option value="UT">Utah</option>
+					<option value="WY">Wyoming</option>
+				</optgroup>
+			</select>
+		</div>
+
+		<!-- <div class="header">
 			<div class="header-left">
 				<div class="menu-icon bi bi-list"></div>
 				<div
@@ -1443,6 +1474,67 @@
 					</div>
 				</div>
 
+				<div class="col-lg-4 col-md-6 col-sm-12 mb-30">
+					<div class="pd-20 card-box text-center height-100-p">
+						<h5 class="pt-20 h5 mb-30">
+							A warning message, with a function attached to the
+							"Confirm"-button...
+						</h5>
+						<div class="max-width-200 mx-auto">
+							<button type="button" class="btn mb-20 btn-primary btn-block" id="sa-warning">Click me</button>
+						</div>
+					</div>
+				</div>
+
+				<div className="main-container">
+					<div className="card-box pb-10">
+						<div className="h2 pd-20 mb-0">Product List</div>
+							<table className="data-table table nowrap">
+								<thead>
+								<tr>
+									<th>ID</th>
+									<th>Product</th>
+									<th>Category</th>
+									<th>Quantity</th>
+									<th>Status</th>
+									<th className="datatable-nosort">Actions</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>001</td>
+									<td className="table-plus">
+										<div className="name-avatar d-flex align-items-center">
+											<div className="avatar mr-2 flex-shrink-0">
+												<img src="../public/deskapp/vendors/images/photo4.jpg" className="border-radius-100 shadow" width={45} height={45} alt=""/>
+											</div>
+											<div className="txt">
+												<div className="weight-600">Antibiotic</div>
+											</div>
+										</div>
+									</td>
+									<td>Medicine</td>
+									<td>90</td>
+									<td>
+										<span className="badge badge-pill" data-bgcolor="#e7ebf5" data-color="#265ed7">Low Stock</span>
+									</td>
+									<td>
+										<div className="table-actions">
+											<a href="#" data-color="#265ed7">
+												<i className="icon-copy dw dw-edit2" />
+											</a>
+											<a href="#" data-color="#e95959">
+												<i className="icon-copy dw dw-delete-3" />
+											</a>
+										</div>
+									</td>
+								</tr>
+	
+								</tbody>
+							</table>
+					</div>
+				</div>
+				
 				<div class="footer-wrap pd-20 mb-20 card-box">
 					DeskApp - Bootstrap 4 Admin Template By
 					<a href="https://github.com/dropways" target="_blank"
@@ -1450,7 +1542,7 @@
 					>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- welcome modal start -->
 		<div class="welcome-modal">
 			<button class="welcome-modal-close">

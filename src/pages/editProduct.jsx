@@ -4,7 +4,7 @@ import Header from "../components/header";
 import Sidebar from "../components/sidebar";
 import { Link } from "react-router-dom";
 
-const AddProduct = () => {
+const EditProduct = () => {
 const [product, setProduct] = useState({
     productImage:"",
     productName:"",
@@ -22,7 +22,7 @@ const handleSubmit =() => {
             <Sidebar />
             <div className="main-container">
                 <div className="card-box pb-10">
-                    <div className="h2 pd-20 mb-0">Add Product</div>
+                    <div className="h2 pd-20 mb-0">Edit Product</div>
                     <div className="pd-20 mb-30">
                         <form onSubmit={handleSubmit}>
                             <div className="row">
@@ -73,14 +73,12 @@ const handleSubmit =() => {
                                 </div>
                             </div>
                         </form>
-                        <button type="submit" class="btn btn-primary btn-lg">Add Product</button>                   
+                        <button type="submit" class="btn btn-primary btn-lg">Update</button>                   
                     </div>
                 </div>
             </div>
       </div>
-
-        
     )
 };
 
-export default AddProduct;
+export default EditProduct;
