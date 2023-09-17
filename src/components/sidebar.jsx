@@ -1,5 +1,7 @@
 // Sidebar.jsx
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
+import ProductList from '../pages/productList';
 
 export default class Header extends Component {
     render(){
@@ -53,22 +55,26 @@ export default class Header extends Component {
                         <ul id="accordion-menu">
                             <li className="dropdown">
                                 <a href="javascript:;" className="dropdown-toggle">
-                                <span className="micon bi bi-table" />
-                                <span className="mtext">Tables</span>
+                                <span className="micon bi bi-bag" />
+                                <span className="mtext">Products</span>
                                 </a>
                                 <ul className="submenu">
-                                <li>
-                                    <a href="basic-table.html">Basic Tables</a>
-                                </li>
-                                <li>
-                                    <a href="datatable.html">DataTables</a>
-                                </li>
+                                    <Link to="/addProduct">
+                                        <li><a>Add Product</a></li>
+                                    </Link>
+                                    <Link to="/productList">
+                                        <li><a>Product List</a></li>
+                                    </Link>
+                                    <Link to="/productCategory">
+                                        <li><a>Product Category</a></li>
+                                    </Link>
                                 </ul>
                             </li>
+                        
                             <li>
                                 <a href="calendar.html" className="dropdown-toggle no-arrow">
                                 <span className="micon bi bi-calendar4-week" />
-                                <span className="mtext">Calendar</span>
+                                <span className="mtext">Manage Appointments</span>
                                 </a>
                             </li>
                         </ul>

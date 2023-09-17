@@ -1,20 +1,29 @@
 import { useState, useEffect } from "react";
 import React, { Component } from 'react';
+import Swal from 'sweetalert2';
 import Header from "../components/header";
 import Sidebar from "../components/sidebar";
 import { Link } from "react-router-dom";
 
 const EditProduct = () => {
-const [product, setProduct] = useState({
-    productImage:"",
-    productName:"",
-    quantity: 0,
-    status:"",
-});
+    const [product, setProduct] = useState({
+        productImage:"",
+        productName:"",
+        quantity: 0,
+        status:"",
+    });
 
-const handleSubmit =() => {
-    alert("Submit");
-}
+    const update = () => {
+        Swal.fire(
+            'Good job!',
+            'Product was updated successfully!',
+            'success'
+        )
+    };
+
+    const handleSubmit =() => {
+        alert("Submit");
+    };
         
     return (
         <div>
@@ -73,7 +82,7 @@ const handleSubmit =() => {
                                 </div>
                             </div>
                         </form>
-                        <button type="submit" class="btn btn-primary btn-lg">Update</button>                   
+                        <button type="submit" class="btn btn-primary btn-lg" onClick={update}>Update</button>                   
                     </div>
                 </div>
             </div>

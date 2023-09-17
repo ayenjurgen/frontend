@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import React, { Component } from 'react';
+import Swal from 'sweetalert2';
 import Header from "../components/header";
 import Sidebar from "../components/sidebar";
 import EditProduct from "./editProduct";
@@ -8,30 +9,48 @@ import { Link } from "react-router-dom";
 const ProductList = () => {
     const [product, setProducts] = useState([]);
 
-useEffect(() => {
-    const url = `${import.meta.env.VITE_API_URL}/products`;
-    const controller = new AbortController();
-
-    const requestOPtions = {
-        signal: controller.signal,
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-        },
-    };
-    fetch(url, requestOPtions)
-    .then((response) => response.json())
-    .then((json) => {
-        setProducts(json);
-    })
-    .catch((err) => console.log(err));
-
-    return () => {
-        controller.abort();
+    const showConfirmation = () => {
+        Swal.fire({
+          title: 'Are you sure?',
+          text: 'This action cannot be undone.',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Yes, delete it!',
+        }).then((result) => {
+          if (result.isConfirmed) {
+            // User clicked "Yes, delete it!"
+            Swal.fire('Deleted!', 'Your item has been deleted.', 'success');
+          } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // User clicked "Cancel"
+            Swal.fire('Cancelled', 'Your action has been cancelled.', 'info');
+          }
+        });
     };
 
+    useEffect(() => {
+        const url = `${import.meta.env.VITE_API_URL}/products`;
+        const controller = new AbortController();
 
-}, []);
+        const requestOPtions = {
+            signal: controller.signal,
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        };
+        fetch(url, requestOPtions)
+        .then((response) => response.json())
+        .then((json) => {
+            setProducts(json);
+        })
+        .catch((err) => console.log(err));
+
+        return () => {
+            controller.abort();
+        };
+
+    }, []);
+
     return (
         <div>
             <Header />
@@ -72,12 +91,12 @@ useEffect(() => {
                                 </td>
                                 <td>
                                     <div className="table-actions">
-                                        <Link to="./editProduct">
+                                        <Link to="/editProduct">
                                             <a href="#" data-color="#265ed7" >
                                                 <i className="icon-copy dw dw-edit2" />
                                             </a>
                                         </Link>
-                                        <a href="#" data-color="#e95959">
+                                        <a href="#" data-color="#e95959" onClick={showConfirmation}>
                                             <i className="icon-copy dw dw-delete-3" />
                                         </a>
                                     </div>
@@ -103,10 +122,12 @@ useEffect(() => {
                                 </td>
                                 <td>
                                     <div className="table-actions">
-                                        <a href="#" data-color="#265ed7">
-                                            <i className="icon-copy dw dw-edit2" />
-                                        </a>
-                                        <a href="#" data-color="#e95959">
+                                        <Link to="/editProduct">
+                                            <a href="#" data-color="#265ed7" >
+                                                <i className="icon-copy dw dw-edit2" />
+                                            </a>
+                                        </Link>
+                                        <a href="#" data-color="#e95959" onClick={showConfirmation}>
                                             <i className="icon-copy dw dw-delete-3" />
                                         </a>
                                     </div>
@@ -132,10 +153,12 @@ useEffect(() => {
                                 </td>
                                 <td>
                                     <div className="table-actions">
-                                        <a href="#" data-color="#265ed7">
-                                            <i className="icon-copy dw dw-edit2" />
-                                        </a>
-                                        <a href="#" data-color="#e95959" >
+                                        <Link to="/editProduct">
+                                            <a href="#" data-color="#265ed7" >
+                                                <i className="icon-copy dw dw-edit2" />
+                                            </a>
+                                        </Link>
+                                        <a href="#" data-color="#e95959" onClick={showConfirmation}>
                                             <i className="icon-copy dw dw-delete-3" />
                                         </a>
                                     </div>
@@ -144,6 +167,7 @@ useEffect(() => {
                         </tbody>
                     </table>
                 </div>
+                
             </div>
       </div>
     )
