@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import React, { Component } from 'react';
 import Header from "../components/header";
 import Sidebar from "../components/sidebar";
+import EditProduct from "./editProduct";
 import { Link } from "react-router-dom";
 
 const ProductList = () => {
@@ -71,9 +72,11 @@ useEffect(() => {
                                 </td>
                                 <td>
                                     <div className="table-actions">
-                                        <a href="#" data-color="#265ed7">
-                                            <i className="icon-copy dw dw-edit2" />
-                                        </a>
+                                        <Link to="./editProduct">
+                                            <a href="#" data-color="#265ed7" >
+                                                <i className="icon-copy dw dw-edit2" />
+                                            </a>
+                                        </Link>
                                         <a href="#" data-color="#e95959">
                                             <i className="icon-copy dw dw-delete-3" />
                                         </a>
@@ -132,7 +135,7 @@ useEffect(() => {
                                         <a href="#" data-color="#265ed7">
                                             <i className="icon-copy dw dw-edit2" />
                                         </a>
-                                        <a href="#" data-color="#e95959">
+                                        <a href="#" data-color="#e95959" >
                                             <i className="icon-copy dw dw-delete-3" />
                                         </a>
                                     </div>
