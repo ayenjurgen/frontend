@@ -32,14 +32,15 @@ const ProductList = () => {
     return (
         <>
             <h1>Product List</h1>
+            <Link to={`./products/create`}>Create</Link>
             <table>
                         <thead>
                             <tr>
                                 <th>Product Name</th>
                                 <th>Quantity</th>
-                                <th>Rate</th>
+                                {/* <th>Rate</th> */}
                                 <th>Price</th>
-                                <th>Active</th>
+                                {/* <th>Active</th> */}
                                 <th>Status</th>
                                 <th>Actions</th>
                             </tr>
@@ -50,12 +51,14 @@ const ProductList = () => {
                                 <tr key={product.id}>
                                 <td>{product.product_name}</td>
                                 <td>{product.quantity}</td>
-                                <td>{product.rate}</td>
+                                {/* <td>{product.rate}</td> */}
                                 <td>{product.price}</td>
-                                <td>{product.active}</td>
+                                {/* <td>{product.active}</td> */}
                                 <td>{product.status}</td>
                                 <td>
-                                <Link to={`products/${product.product_id}`}>View</Link>
+                                <Link to={`products/${product.id}`}>View</Link>
+                                <Link to={`products/edit`}>Edit</Link>
+                
                                 </td>
                                 </tr>
                             );
