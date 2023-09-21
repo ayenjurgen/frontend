@@ -54,10 +54,10 @@ const ProductList = () => {
                                 {/* <td>{product.rate}</td> */}
                                 <td>{product.price}</td>
                                 {/* <td>{product.active}</td> */}
-                                <td>{product.status}</td>
+                                <td>{product.status == 1? "available": "Not available"}</td>
                                 <td>
                                 <Link to={`products/${product.id}`}>View</Link>
-                                <Link to={`products/edit`}>Edit</Link>
+                                <Link to={`/products/edit/${product.id}`}>Edit</Link>
                 
                                 </td>
                                 </tr>

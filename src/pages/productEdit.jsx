@@ -32,7 +32,7 @@ const ProductEdit = () => {
     fetch(url, requestOptions)
     .then((response) => response.json())
     .then((json) => {
-      console.log(json);
+      setProduct(json);
       navigate(`/products/${json.product.id}`);
       })
       .catch((err) => console.log(err));
@@ -48,7 +48,7 @@ const ProductEdit = () => {
     const url = `${import.meta.env.VITE_API_URL}/products/${id}`;
 
     const requestOptions = {
-      method: "PUT",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json",
         // Authorization: `Bearer ${token}`,
@@ -84,7 +84,7 @@ const ProductEdit = () => {
 
   return (
     <>
-      <h1>Product Edit</h1>
+      <h1>Product Edit {id}</h1>
       <form onSubmit={handleSubmit}>
         <p>
           <label>Product Name: </label>
@@ -104,7 +104,7 @@ const ProductEdit = () => {
             onChange={handleChange}
           />
         </p>
-        <p>
+        {/* <p>
           <label>Rate: </label>
           <input
             type="number"
@@ -112,7 +112,7 @@ const ProductEdit = () => {
             value={product.rate}
             onChange={handleChange}
           />
-        </p>
+        </p> */}
         <p>
           <label>Price: </label>
           <input
@@ -122,7 +122,7 @@ const ProductEdit = () => {
             onChange={handleChange}
           />
         </p>
-        <p>
+        {/* <p>
           <label>Active: </label>
           <input
             type="number"
@@ -130,7 +130,7 @@ const ProductEdit = () => {
             value={product.active}
             onChange={handleChange}
           />
-        </p>
+        </p> */}
         <p>
         <label>Status: </label>
         <select name="status" value={product.status} onChange={handleChange}>

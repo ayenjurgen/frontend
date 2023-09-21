@@ -77,7 +77,7 @@ const ProductCreate = () => {
             onChange={handleChange}
           />
         </p>
-        <p>
+        {/* <p>
           <label>Rate: </label>
           <input
             type="number"
@@ -85,7 +85,7 @@ const ProductCreate = () => {
             value={product.rate}
             onChange={handleChange}
           />
-        </p>
+        </p> */}
         <p>
           <label>Price: </label>
           <input
@@ -95,7 +95,7 @@ const ProductCreate = () => {
             onChange={handleChange}
           />
         </p>
-        <p>
+        {/* <p>
           <label>Active: </label>
           <input
             type="number"
@@ -103,7 +103,7 @@ const ProductCreate = () => {
             value={product.active}
             onChange={handleChange}
           />
-        </p>
+        </p> */}
         <p>
         <label>Status: </label>
         <select name="status" value={product.status} onChange={handleChange}>
