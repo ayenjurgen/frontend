@@ -31,103 +31,133 @@ const ProductList = () => {
 
     return (
         <>
-            <div className="header">
-                <div className="header-left">
-                <div className="menu-icon bi bi-list" />
+
+        <div className="xs-pd-20-10 pd-ltr-20">
+            <div className="title pb-20">
+                <h2 className="h3 mb-0">Product List</h2>
+            </div>
+            <Link to={`./products/create`}>
+                <button type="button" className="btn btn-primary" >
+                    Create Product
+                </button>
+            </Link>
+
+            <div className="card-box mb-30">
+                <div className="pb-20">
+                    <table className="table hover multiple-select-row data-table-export nowrap">
+                    <thead>
+                        <tr>
+                        <th className="table-plus datatable-nosort">Name</th>
+                        <th>Age</th>
+                        <th>Office</th>
+                        <th>Address</th>
+                        <th>Start Date</th>
+                        <th>Salart</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td className="table-plus">Gloria F. Mead</td>
+                        <td>25</td>
+                        <td>Sagittarius</td>
+                        <td>2829 Trainer Avenue Peoria, IL 61602</td>
+                        <td>29-03-2018</td>
+                        <td>$162,700</td>
+                        </tr>
+                        <tr>
+                        <td className="table-plus">Andrea J. Cagle</td>
+                        <td>30</td>
+                        <td>Gemini</td>
+                        <td>1280 Prospect Valley Road Long Beach, CA 90802</td>
+                        <td>29-03-2018</td>
+                        <td>$162,700</td>
+                        </tr>
+                        <tr>
+                        <td className="table-plus">Andrea J. Cagle</td>
+                        <td>20</td>
+                        <td>Gemini</td>
+                        <td>2829 Trainer Avenue Peoria, IL 61602</td>
+                        <td>29-03-2018</td>
+                        <td>$162,700</td>
+                        </tr>
+                        <tr>
+                        <td className="table-plus">Andrea J. Cagle</td>
+                        <td>30</td>
+                        <td>Sagittarius</td>
+                        <td>1280 Prospect Valley Road Long Beach, CA 90802</td>
+                        <td>29-03-2018</td>
+                        <td>$162,700</td>
+                        </tr>
+                        <tr>
+                        <td className="table-plus">Andrea J. Cagle</td>
+                        <td>25</td>
+                        <td>Gemini</td>
+                        <td>2829 Trainer Avenue Peoria, IL 61602</td>
+                        <td>29-03-2018</td>
+                        <td>$162,700</td>
+                        </tr>
+                        <tr>
+                        <td className="table-plus">Andrea J. Cagle</td>
+                        <td>20</td>
+                        <td>Sagittarius</td>
+                        <td>1280 Prospect Valley Road Long Beach, CA 90802</td>
+                        <td>29-03-2018</td>
+                        <td>$162,700</td>
+                        </tr>
+                        <tr>
+                        <td className="table-plus">Andrea J. Cagle</td>
+                        <td>18</td>
+                        <td>Gemini</td>
+                        <td>1280 Prospect Valley Road Long Beach, CA 90802</td>
+                        <td>29-03-2018</td>
+                        <td>$162,700</td>
+                        </tr>
+                        <tr>
+                        <td className="table-plus">Andrea J. Cagle</td>
+                        <td>30</td>
+                        <td>Sagittarius</td>
+                        <td>1280 Prospect Valley Road Long Beach, CA 90802</td>
+                        <td>29-03-2018</td>
+                        <td>$162,700</td>
+                        </tr>
+                        <tr>
+                        <td className="table-plus">Andrea J. Cagle</td>
+                        <td>30</td>
+                        <td>Sagittarius</td>
+                        <td>1280 Prospect Valley Road Long Beach, CA 90802</td>
+                        <td>29-03-2018</td>
+                        <td>$162,700</td>
+                        </tr>
+                        <tr>
+                        <td className="table-plus">Andrea J. Cagle</td>
+                        <td>30</td>
+                        <td>Gemini</td>
+                        <td>1280 Prospect Valley Road Long Beach, CA 90802</td>
+                        <td>29-03-2018</td>
+                        <td>$162,700</td>
+                        </tr>
+                        <tr>
+                        <td className="table-plus">Andrea J. Cagle</td>
+                        <td>30</td>
+                        <td>Gemini</td>
+                        <td>1280 Prospect Valley Road Long Beach, CA 90802</td>
+                        <td>29-03-2018</td>
+                        <td>$162,700</td>
+                        </tr>
+                        <tr>
+                        <td className="table-plus">Andrea J. Cagle</td>
+                        <td>30</td>
+                        <td>Gemini</td>
+                        <td>1280 Prospect Valley Road Long Beach, CA 90802</td>
+                        <td>29-03-2018</td>
+                        <td>$162,700</td>
+                        </tr>
+                    </tbody>
+                    </table>
                 </div>
             </div>
-            <div className="left-side-bar sidebar-light">
-                <div className="profile">
-                <div className="prof-top">
-                    <img src="../../../public/imported/vendors/images/logo-icon.png" />
-                    <p className="studname">greenhills escandor-mariano callanta-peligro</p>
-                </div>
-                <div className="close-sidebar" data-toggle="left-sidebar-close">
-                    <i className="ion-close-round" />
-                </div>
-                </div>
-                <div className="menu-block customscroll">
-                <div className="sidebar-menu">
-                    <ul id="accordion-menu">
-                    <li>
-                        <a href="#" className="dropdown-toggle no-arrow">
-                        <span className="micon bi bi bi-house" />
-                        <span className="mtext">Dashboard</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" className="dropdown-toggle no-arrow">
-                        <span className="micon bi bi-person-check" />
-                        <span className="mtext">My Profile</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" className="dropdown-toggle no-arrow">
-                        <span className="micon bi bi-arrow-left" />
-                        <span className="mtext">Logout</span>
-                        </a>
-                    </li>
-                    </ul>
-                </div>
-                </div>
-            </div>
-            <div className="mobile-menu-overlay" />
-            <div className="main-container">
-                <div className="xs-pd-20-10 pd-ltr-20">
-                <div className="title pb-20">
-                    <h2 className="h3 mb-0">My Profile</h2>
-                </div>
-                <form action="post">
-                    <div className="row">
-                    <div className="col-md-9">
-                        <div className="pd-20 card-box mb-30">
-                        <section>
-                            <div className="row">
-                            <div className="col-md-6">
-                                <div className="form-group">
-                                <label>First Name :</label>
-                                <input
-                                    type="text"
-                                    name="firstname"
-                                    className="form-control"
-                                />
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="form-group">
-                                <label>Middle Name :</label>
-                                <input
-                                    type="text"
-                                    name="middlename"
-                                    className="form-control"
-                                />
-                                </div>
-                            </div>
-                            </div>
-                        </section>
-                        </div>
-                    </div>
-                    <div
-                        className="col-md-3"
-                        style={{
-                        display: "flex",
-                        alignItems: "center",
-                        flexDirection: "column"
-                        }}
-                    >
-                        <button
-                        type="submit"
-                        name="register"
-                        className="btn"
-                        id="submit-button"
-                        >
-                        Update
-                        </button>
-                    </div>
-                    </div>
-                </form>
-                </div>
-            </div>
+        </div>
+
         </>
                 
     )
