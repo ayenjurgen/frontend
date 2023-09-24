@@ -4,6 +4,8 @@ import ProductView from "./pages/productView";
 import ProductCreate from "./pages/productCreate";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductEdit from './pages/productEdit';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 
 
 function App() {
@@ -15,7 +17,7 @@ function App() {
                     <Route path="/products/:id" element={<ProductView/>}></Route>
                     <Route path="/products/create" element={<ProductCreate />}></Route>
                     <Route path="/products/edit/:id" element={<ProductEdit />}></Route>
-
+                    <Route path='testing'></Route>
                 </Routes>
             </BrowserRouter>
         </>

@@ -1,0 +1,116 @@
+
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100vw;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+  }
+  
+  a:hover{
+    color: currentColor;
+  }
+  
+
+.profile{
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.left-side-bar .prof-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-side-bar .prof-top img{
+    width: 6rem;
+    height: 6rem;
+}   
+
+.left-side-bar .prof-top .studname{
+    margin-top: 10px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+}
+
+.form-group .pass{
+    padding: 0;
+    display: grid;
+    grid-template-columns: 85% 15%;
+}
+
+.form-group .pass input{
+    outline: none;
+    border: none;
+    background: none;
+    height: 100%;
+    padding: 6px 12px;
+}
+
+.form-group .pass span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pass:focus {
+    color: #131e22;
+    border-color: #336b4f;
+    -webkit-box-shadow: 0 0 28px rgba(0,0,0,.1);
+    box-shadow: 0 0 28px rgba(0,0,0,.1)
+}
+
+.upload-file{
+    margin-top: 20px;
+    padding: 0;
+    font-family: 'Inter',sans-serif;
+    letter-spacing: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.hide-file {
+    cursor: pointer;
+    background-color: #6C757d;
+    color: #fff;    
+    height: auto;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 0.719rem 1rem;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+#upload {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#submit-button{
+    background-color: #336b4f;
+    color: #fff;
+    width: 200px;
+}
+
+@media (max-width: 1300px){
+    .logo{
+        justify-content: center;
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 1024px){
+    .moving-text{
+        display: none;
+    }
+}

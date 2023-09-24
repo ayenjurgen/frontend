@@ -46,6 +46,7 @@ const ProductCreate = () => {
       .catch((err) => {
         console.error(err);
       });
+
   };
 
   const handleChange = (e) => {
