@@ -143,7 +143,7 @@ const ProductEdit = () => {
       <div className="wrap-div">
         <div className="xs-pd-20-10 pd-ltr-20">
           <div class="title pb-20">
-            <h2 class="h3 mb-0">Edit {id}</h2>
+            <h2 class="h3 mb-0">Edit <span style={{fontWeight: 700, fontSize: 16, textTransform: "capitalize"}}>{id}</span></h2>
           </div>
 
           <div className="card-box pb-10" style={{ backgroundColor: "none", boxShadow: "none" }}>

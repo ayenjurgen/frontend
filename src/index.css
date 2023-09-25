@@ -507,6 +507,11 @@ header .mobile-toggler{
     color: #031E23;
 }
 
+#bastaCard{
+  width: 50%;
+  margin: 0 auto;
+}
+
 @media (max-width: 1200px){
   .box{
       width: 35%;
@@ -552,7 +557,12 @@ header .mobile-toggler{
 }
 
 @media screen and (max-width: 878px) {
-
+  #bastaCard{
+    background-color: red;
+    width: 60%;
+    margin: 0 auto;
+  }
+  
 }
 
 @media (max-width: 850px) {
@@ -586,7 +596,24 @@ header .mobile-toggler{
       grid-row-gap: 2rem;
   }
 
+  #bastaCard{
+    background-color: rgb(76, 0, 255);
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+
 }
+
+@media (max-width: 576px) {
+  #bastaCard{
+    background-color: rgb(102, 255, 0);
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+}
+
 
 @media (max-width: 530px) {
 
