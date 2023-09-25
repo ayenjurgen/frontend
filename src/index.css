@@ -302,11 +302,6 @@ header .mobile-toggler{
   height: 100%;
   width: 100%;
 }
-
-form {
-  padding: 40px;
-}
-
 .logo {
   display: flex;
   align-items: center;
@@ -505,7 +500,12 @@ form {
     color: red;
 }
 
-
+.arrow{
+  width: 100px; /* Adjust the width as needed */
+    padding: 5px;
+    font-size: 16px;
+    color: #031E23;
+}
 
 @media (max-width: 1200px){
   .box{

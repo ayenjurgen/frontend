@@ -37,19 +37,19 @@ const ProductList = () => {
                         <img src="../../../public/imported/vendors/images/logo-icon.png" alt="hi" />
                         <h3>BlueSky</h3>
                     </div>
-                    <div className="navb-items">
+                    {/* <div className="navb-items">
                         <ul className="main-nav">
                             <li className="item">
                                 <a href="login.php">LOGOUT</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
                     {/* Button trigger modal */}
-                    <div className="mobile-toggler">
+                    {/* <div className="mobile-toggler">
                         <a href="#" data-bs-toggle="modal" data-bs-target="#navbModal">
                             <i className="fa-solid fa-bars-staggered" />
                         </a>
-                    </div>
+                    </div> */}
                     {/* Modal */}
                     <div className="modal fade" id="navbModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div className="modal-dialog">
@@ -97,7 +97,7 @@ const ProductList = () => {
                             Create Product
                         </button>
                     </Link>
-                    <div className="card-box pb-10" style={{ marginTop: 10 }}>
+                    <div className="card-box" style={{ marginTop: 10, padding: 20}}>
                         <table className="data-table table nowrap">
                             <thead>
                                 <tr>
