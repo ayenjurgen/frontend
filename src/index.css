@@ -259,8 +259,8 @@ header .mobile-toggler{
 }
 
 .modal-body ul li a:hover{
-  color: #336b4f;
-  background: #C1E1C1;
+  color: white;
+  background: #031E23;
 }
 
 .modal-body ul li a{

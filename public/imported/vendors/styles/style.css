@@ -810,7 +810,7 @@ p {
     border-radius: 0
 }
 
-.custom-file-label {
+.custom-file-.dataTables_length {
     padding-top: .475rem;
     letter-spacing: .035em
 }
@@ -1355,7 +1355,23 @@ table.dataTable>tbody>tr.child ul.dtr-details {
     white-space: normal
 }
 
-.dataTables_length,
+.dataTables_length{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px 15px 0 15px;
+}
+
+.dataTables_length label{
+    width: 100%;
+}
+
+.dataTables_length label select{
+    padding-left: 15px;
+    padding-right: 20px;
+    width: 300px;
+}
+
 .dt-buttons,
 div.dataTables_wrapper div.dataTables_filter,
 div.dataTables_wrapper div.dataTables_info,

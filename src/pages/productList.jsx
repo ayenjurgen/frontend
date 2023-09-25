@@ -56,6 +56,7 @@ const ProductList = () => {
                             <div className="modal-content">
                                 <div className="modal-header">
                                     <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                        <i class="icon-copy bi bi-x-circle"></i>
                                     </button>
                                 </div>
                                 <div className="modal-middle">
@@ -66,6 +67,7 @@ const ProductList = () => {
                                     <ul>
                                         <li id="dashboard">
                                             <a href="index.php">
+                                                <span class="micon bi bi-house"></span>
                                                 <span className="name">HOME</span>
                                             </a>
                                         </li>
@@ -73,6 +75,7 @@ const ProductList = () => {
                                     <ul>
                                         <li id="dashboard">
                                             <a href="login.php">
+                                                <span class="micon bi bi-arrow-bar-left"></span>
                                                 <span className="name">LOGOUT</span>
                                             </a>
                                         </li>
@@ -86,40 +89,59 @@ const ProductList = () => {
 
             <div className="wrap-div">
                 <div className="xs-pd-20-10 pd-ltr-20">
-                    <div className="title pb-20 mb-10">
-                        <h3 style={{ background: "red", fontWeight: 600 }}>Product List</h3>
+                    <div class="title pb-20">
+                        <h2 class="h3 mb-0">Product List</h2>
                     </div>
                     <Link to={`./products/create`}>
-                        <button type="button" className="btn btn-primary" >
+                        <button type="button" className="btn btn-primary" style={{ marginTop: 20 }}>
                             Create Product
                         </button>
                     </Link>
-
-                    <div classname="card-box mb-30">
-                        <div className="pb-20">
-                            <table className="table hover multiple-select-row data-table-export nowrap">
-                                <thead>
-                                    <tr>
-                                        <th className="table-plus datatable-nosort">Name</th>
-                                        <th>Age</th>
-                                        <th>Office</th>
-                                        <th>Address</th>
-                                        <th>Start Date</th>
-                                        <th>Salart</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="table-plus">Gloria F. Mead</td>
-                                        <td>25</td>
-                                        <td>Sagittarius</td>
-                                        <td>2829 Trainer Avenue Peoria, IL 61602</td>
-                                        <td>29-03-2018</td>
-                                        <td>$162,700</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <div className="card-box pb-10" style={{ marginTop: 10 }}>
+                        <table className="data-table table nowrap">
+                            <thead>
+                                <tr>
+                                    <th className="table-plus">Product Name</th>
+                                    <th>Quantity</th>
+                                    <th>Weight</th>
+                                    <th>Price</th>
+                                    <th>Status</th>
+                                    <th className="datatable-nosort">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {product.map((product) => {
+                                    return (
+                                        <tr key={product.id}>
+                                            <td className="table-plus">
+                                                <div className="name-avatar d-flex align-items-center">
+                                                    <div className="txt">
+                                                        <div className="weight-600">{product.product_name}</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>{product.quantity}</td>
+                                            <td>{product.price}</td>
+                                            <td>{product.status == 1 ? "available" : "Not available"}</td>
+                                            <td>
+                                                <div className="table-actions">
+                                                    <Link to={`products/${product.id}`}>View
+                                                        <a href="#" data-color="#265ed7">
+                                                            <i className="icon-copy dw dw-edit2" />
+                                                        </a>
+                                                    </Link>
+                                                    <Link to={`/products/edit/${product.id}`}>Edit
+                                                        <a href="#" data-color="#e95959">
+                                                            <i className="icon-copy dw dw-delete-3" />
+                                                        </a>
+                                                    </Link>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    );
+                                })}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
