@@ -934,7 +934,8 @@ textarea.form-control {
 }
 
 .has-danger {
-    color: #dc3545
+    color: #dc3545;
+    /* color: #f5e1e3; */
 }
 
 .form-control-danger {
