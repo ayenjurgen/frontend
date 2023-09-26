@@ -41,7 +41,7 @@ const ProductView = () => {
     const handleDelete = () => {
         const url = `${import.meta.env.VITE_API_URL}/products/${id}`;
 
-        if (window.confirm("Are you sure you want to Delete this Employee?")) {
+        if (window.confirm("Are you sure you want to Delete this Product?")) {
             const requestOptions = {
                 method: "DELETE",
                 headers: {

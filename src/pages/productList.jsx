@@ -103,7 +103,6 @@ const ProductList = () => {
                                 <tr>
                                     <th className="table-plus">Product Name</th>
                                     <th>Quantity</th>
-                                    <th>Weight</th>
                                     <th>Price</th>
                                     <th>Status</th>
                                     <th className="datatable-nosort">Actions</th>
@@ -122,7 +121,7 @@ const ProductList = () => {
                                             </td>
                                             <td>{product.quantity}</td>
                                             <td>{product.price}</td>
-                                            <td>{product.status == 1 ? "available" : "Not available"}</td>
+                                            <td>{product.status == 1 ? "Available" : "Not available"}</td>
                                             <td>
                                                 <div className="table-actions">
                                                     <Link to={`products/${product.id}`}>
