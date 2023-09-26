@@ -88,7 +88,7 @@ const ProductEdit = () => {
         <div className="container-fluid">
           <div className="navb-logo">
             <img src="../../../public/imported/vendors/images/logo-icon.png" alt="hi" />
-            <h3>BlueSky</h3>
+            <h3>Product Inventory</h3>
           </div>
           {/* <div className="navb-items">
                         <ul className="main-nav">
@@ -114,7 +114,7 @@ const ProductEdit = () => {
                 </div>
                 <div className="modal-middle">
                   <img src="../../../public/imported/vendors/images/logo-icon.png" alt="hi" />
-                  <h3>BlueSky</h3>
+                  <h3>Product Inventory</h3>
                 </div>
                 <div className="modal-body">
                   <ul>
