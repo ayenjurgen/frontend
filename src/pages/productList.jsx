@@ -61,7 +61,7 @@ const ProductList = () => {
                                 </div>
                                 <div className="modal-middle">
                                     <img src="../../../public/imported/vendors/images/logo-icon.png" alt="hi" />
-                                    <h3>BlueSky</h3>
+                                    <h3>Product Inventory</h3>
                                 </div>
                                 <div className="modal-body">
                                     <ul>
