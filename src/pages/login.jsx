@@ -42,12 +42,13 @@ const Login = () => {
       <div className="wrap-div">
         <div className="xs-pd-20-10 pd-ltr-20">
           <div class="title pb-20">
-            <h2 class="h3 mb-0">Login</h2>
+            {/* <h2 class="h3 mb-0">Login</h2> */}
           </div>
           <form onSubmit={handleLogin}>
             <div className="card card-box" id="bastaCard">
               <div className="card-body">
                 <div className="form-group">
+                <h2 class="h3 mb-3">Login</h2>
                   <label class="col-form-label" style={{marginLeft: 20}}>Email</label>
                   <div class="col">
                     <input class="form-control" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />

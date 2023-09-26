@@ -37,13 +37,13 @@ const ProductList = () => {
                         <img src="../../../public/imported/vendors/images/logo-icon.png" alt="hi" />
                         <h3>Product Inventory</h3>
                     </div>
-                    {/* <div className="navb-items">
+                    <div className="navb-items">
                         <ul className="main-nav">
                             <li className="item">
-                                <a href="login.php">LOGOUT</a>
+                                <a href="http://localhost:5173/login">LOGOUT</a>
                             </li>
                         </ul>
-                    </div> */}
+                    </div>
                     {/* Button trigger modal */}
                     {/* <div className="mobile-toggler">
                         <a href="#" data-bs-toggle="modal" data-bs-target="#navbModal">
