@@ -28,8 +28,8 @@ const Login = () => {
     const fetchResponse = await fetch(url, requestOptions);
     if (fetchResponse.status === 200) {
       let data = await fetchResponse.json();
-      setToken(data.token);
-      setIsAuthenticated(true);
+    //   setToken(data.token);
+    //   setIsAuthenticated(true);
       navigate("/");
     } else {
       alert("Invalid Credential");
