@@ -6,7 +6,7 @@ document.addEventListener('input', function (event) {
 
         // Ensure the value is within a specific range (optional)
         const minValue = 0;
-        const maxValue = 100;
+        const maxValue = Infinity; // Set the maximum value to infinity
         const parsedValue = parseInt(event.target.value, 10);
         if (parsedValue < minValue) {
             event.target.value = minValue;
@@ -15,3 +15,4 @@ document.addEventListener('input', function (event) {
         }
     }
 });
+

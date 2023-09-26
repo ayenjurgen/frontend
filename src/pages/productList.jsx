@@ -124,14 +124,14 @@ const ProductList = () => {
                                             <td>{product.status == 1 ? "Available" : "Not available"}</td>
                                             <td>
                                                 <div className="table-actions">
-                                                    <Link to={`products/${product.id}`}>View
-                                                        <a href="#" data-color="#265ed7">
-                                                            <i className="icon-copy dw dw-edit2" />
+                                                    <Link to={`products/${product.id}`}>
+                                                        <a href="#" data-color="#265ed7" style={{fontSize: 15, marginRight: 10}}>
+                                                            <i className="icon-copy bi bi-eye" /> View
                                                         </a>
                                                     </Link>
-                                                    <Link to={`/products/edit/${product.id}`}>Edit
-                                                        <a href="#" data-color="#e95959">
-                                                            <i className="icon-copy dw dw-delete-3" />
+                                                    <Link to={`/products/edit/${product.id}`}>
+                                                        <a href="#" data-color="#e95959" style={{fontSize: 15}}>
+                                                            <i className="icon-copy dw dw-edit2" /> Edit
                                                         </a>
                                                     </Link>
                                                 </div>
